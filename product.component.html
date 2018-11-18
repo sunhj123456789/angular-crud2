@@ -1,0 +1,24 @@
+
+
+
+<div class="container">
+  <div class="center">
+    <a href="#" routerLink="/">Back</a>
+   <form id="formdata" name="form"  #product="ngForm" (ngSubmit)="submit(product.value)">
+     <label for="productname">Name</label>
+     <input type="text" name="name" placeholder="productname" ([ngModel])="name" ngModel>
+     <br>
+  
+     <label for="color">color</label>
+     <input type="text" name="color" placeholder="color" ([ngModel])="color" ngModel>
+     <br>
+     <input type="submit"  class="btn btn-primary"value="submit">
+
+</form>
+</div>
+<div *ngIf="isadded">
+  <div class="container">
+      <div class="well well-sm">New product is Added</div>
+  </div>
+</div>
+</div>

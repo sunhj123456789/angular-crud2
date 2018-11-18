@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="center">
+   <div *ngIf="exist">
+     <form id="formdata" name="form"  #update="ngForm" (ngSubmit)="submit(update.value)">
+     <label for="productname">Name</label>
+     <input type="text" name="name" placeholder="productname" [(ngModel)]="data.name" ngModel>
+     <br>
+
+     <label for="color">color</label>
+     <input type="text" name="color" placeholder="color" [(ngModel)]="data.color" ngModel>
+     <br>
+     <input type="submit"  class="btn btn-primary"value="submit">
+   </form>
+  </div>
+   <div *ngIf="!exist">
+     <p>product is not exist</p>
+   </div>
+</div>
+</div>

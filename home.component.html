@@ -1,0 +1,24 @@
+<div class="container">
+  <a href="#" routerLink="product">AddMe</a>
+
+   <div class="table table-responsive table-hover"> 
+     <table class="table">
+       <thead [style.background-color]="'#2980b9'">
+         <th>id</th>
+         <th>Name</th>
+         <th>color</th>
+         <th>Deletion</th>
+         <th>updation</th>
+       </thead>
+       <tbody>
+         <tr *ngFor="let products of product;let i=index"[style.background-color]="i%2==0?'#d35400':'#16a085'">
+           <td>{{products.id}}</td>
+           <td>{{products.name}}</td>
+           <td>{{products.color}}</td>
+           <td><button type="button" class="btn btn-primary" (click)="Delete(products)">Delete</button></td>
+           <td><button class="btn btn-primary" [routerLink]="['update',products.id]">update</button></td>
+          </tr>
+       </tbody>
+    </table>
+   </div>
+</div>
